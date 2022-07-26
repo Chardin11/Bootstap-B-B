@@ -146,14 +146,3 @@ footer {
 #footer-contact, h6 {
   margin-top: 4px;
 }
-
-
-/* media */
-@media screen and (max-width: 500px) {
-  .cards {
-    grid-template-areas:
-    'card 1'
-    'card 2'
-    'card 3';
-  }
-}
