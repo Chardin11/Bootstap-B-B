@@ -1,0 +1,159 @@
+/*
+Developer: Connor Hardin
+Date: 7/25/2022
+Assignment: Bootstrap B&B
+File Name: styles.css
+*/
+:root {
+  --background: #878E88;
+  --shadow: 5px 5px 25px 8px grey;
+}
+
+body {
+  background-color: var(--background);
+}
+
+.wrapper{
+  display: grid;
+  grid-gap: 10px;
+}
+
+.container h1, p, h5{
+  text-align: center;
+}
+
+/* Nav */
+.navbar li:hover {
+  background-color: grey;
+}
+
+/* header */
+.heading h1{
+  text-align: center;
+  margin-left: 60px;
+  justify-content: center;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 190px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.heading p {
+  font-size: 1.1rem;
+}
+
+/* Cards */
+.container {
+  background-color: white;
+}
+
+.heading {
+  box-shadow: var(--shadow);
+  padding: 25px;
+}
+
+.cards {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas:
+  'card1 card2 card3';
+  justify-content: center;
+  justify-content: space-around;
+}
+
+.cardone {
+  grid-area: card1;
+  box-shadow: 1px 1px 15px 1px grey;
+  background-color: white;
+}
+
+.cardtwo {
+  grid-area: card2;
+  box-shadow: var(--shadow);
+  background-color: white;
+}
+
+.cardthree {
+  grid-area: card3;
+  box-shadow: var(--shadow);
+  background-color: white;
+}
+
+/* amenities */
+.amenities {
+  text-align: center;
+  background-image: url(images/background.png);
+}
+
+.amenities li {
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 1.2rem;
+}
+
+/* footer */
+footer {
+  padding: 5px;
+  text-align: center;
+  background-color: var(--background);
+  bottom: 0;
+}
+
+/* contact-html page */
+
+.body {
+  display: grid;
+  grid-gap: 10px;
+  padding: 5px;
+  grid-template-areas:
+  'form map';
+  box-shadow: var(--shadow);
+}
+
+.contact-wrapper {
+  position: relative;
+}
+
+.form {
+  grid-area: form;
+  padding: 10px;
+}
+
+.map {
+  grid-area: map;
+}
+
+#footer-contact, h6 {
+  margin-top: 4px;
+}
+
+
+/* media */
+@media screen and (max-width: 500px) {
+  .cards {
+    grid-template-areas:
+    'card 1'
+    'card 2'
+    'card 3';
+  }
+}
